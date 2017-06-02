@@ -21,7 +21,7 @@ Este programa se compiló y funcionó a la perfección en:
   - Microsoft Windows 10 64-Bits
   - Arch Linux (Linux 4.10) (Base-Devel) 64-Bits
 
-No se asegura el funcionamiento de este programa en:
+Este programa aún no ha sido testeado en:
   - Mac OSX
   - FreeBSD
 
