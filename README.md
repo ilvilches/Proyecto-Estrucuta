@@ -5,13 +5,13 @@ a planificar de mejor manera su semana y ayudará a crear un nexo de comunicaci�
 los estudiantes y su casa de estudios.
 
 ## Características
-  - Medinte el modo local, es capaz de ensamblar el horario del estudiante con sus respectivos cursos
+  - Mediante el modo local, es capaz de ensamblar el horario del estudiante con sus respectivos cursos
   - El usuario es capaz de añadir tareas
   - Se espera que sea capaz de actualizar el horario de la institucion mediante sockets
   - Se espera que puede añadir notificaciones, actividades y eventos de la institucion
 
-## Compilar
-Para ejecutar esta aplicación debería bastar con ejecutar el comando gcc (si se dipone de el)
+## Ejecutar y compilar
+Para ejecutar esta aplicación debería bastar con ejecutar el comando gcc (si se dipone de él)
 tambien puede utilizar el IDE Code::Blocks en conjunto a su compilador preferido:
 
     gcc main.c
