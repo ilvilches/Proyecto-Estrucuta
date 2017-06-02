@@ -1,0 +1,27 @@
+# depslib dependency file v1.0
+1496339050 source:c:\users\mauri\documents\c scripts\proyecto@estructura\libs\list.c
+	<stdlib.h>
+	"List.h"
+
+1496339041 c:\users\mauri\documents\c scripts\proyecto@estructura\libs\list.h
+	<stdio.h>
+	<stdlib.h>
+
+1496414865 source:c:\users\mauri\documents\c scripts\proyecto@estructura\libs\mauri.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+	"mauri.h"
+	<conio.h>
+	<termios.h>
+
+1495668092 c:\users\mauri\documents\c scripts\proyecto@estructura\libs\mauri.h
+
+1496416778 source:c:\users\mauri\documents\c scripts\proyecto@estructura\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Libs/List.h"
+	"Libs/mauri.h"
+
