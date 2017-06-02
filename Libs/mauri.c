@@ -21,28 +21,6 @@ void pause ()
     while (getchar() != '\n');
 }
 
-/*
-// Readkey supone leer un 'char' por teclado sin imprimir en pantalla
-#ifdef _WIN32                           // En caso de que se ejecute bajo Windows
-#include <conio.h>                      // Se incluye 'conio.h' << Fuente original
-int readKey () {return getch ();}
-#else                                   // En caso de que se ejecute bajo UNIX
-#include <termios.h>                    // Se incluye 'termios.h' << Definiciones para la consola (I/0)
-int readKey ()
-{
-	struct termios oldt, newt;
-	int ch;
-	tcgetattr(STDIN_FILENO, &oldt);
-	newt = oldt;
-	newt.c_lflag &= ~(ICANON | ECHO);
-	tcsetattr(STDIN_FILENO, TCSANOW, &newt);
-	ch = getchar();
-	tcsetattr(STDIN_FILENO, TCSANOW, &oldt);
-	return ch;
-}
-#endif
-*/
-
 // readString supone almacenar todo el contenido ingresado por teclado hasta el salto de linea
 char* readString ()
 {
@@ -99,13 +77,13 @@ void QError (char *display_error)
 }
 
 // Numb To Day recive un numero e imprime en pantalla el nombre del dia correspondiente
-#define _1DAY "Lunes"
-#define _2DAY "Martes"
-#define _3DAY "Miercoles"
-#define _4DAY "Jueves"
-#define _5DAY "Viernes"
-#define _6DAY "Sabado"
-#define _7DAY "Domingo"
+#define _1DAY "LUNES"
+#define _2DAY "MARTES"
+#define _3DAY "MIERCOLES"
+#define _4DAY "JUEVES"
+#define _5DAY "VIERNES"
+#define _6DAY "SABADO"
+#define _7DAY "DOMINGO"
 void NumbToDay (int number)
 {
     if (!(number >= 1 && number <= 7)) return;
