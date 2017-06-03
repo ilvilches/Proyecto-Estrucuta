@@ -22,7 +22,7 @@ int main()
     char input;
     while (1){
         clearscr ();
-        printf ("SERVER > MENU PRINCIPAL\n1.Ver horario\n2.Editar horario\n\nInput: $ ");
+        printf ("SERVER > MENU PRINCIPAL\n1.Ver horario\n2.Editar horario\n3.Salir\n\nInput: $ ");
         input = getchar ();
         if (input == '1'){
             clearscr ();
@@ -37,6 +37,9 @@ int main()
             keys = tt [0];
             list = keys [0];
             pushBack (list,createClass());
+        }
+        if(input == '3'){
+            return EXIT_SUCCESS;
         }
     }
     return EXIT_SUCCESS;
