@@ -20,7 +20,7 @@ tambien puede utilizar el IDE Code::Blocks en conjunto a su compilador preferido
 Este programa se compiló y funcionó a la perfección en:
   - Microsoft Windows 10 64-Bits
   - Arch Linux (Linux 4.10) (Base-Devel) 64-Bits
-  - Android 7.1.2 (AOSP)
+  - Android 7.1.2 (AOSP) ARM64
 
 Este programa aún no ha sido testeado en:
   - Mac OSX
