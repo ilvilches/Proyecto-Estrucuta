@@ -1,7 +1,6 @@
 #ifndef MAURI_H_INCLUDED
 #define MAURI_H_INCLUDED
 
-void Add (void**);
 void clearscr ();
 void pause ();
 char* readString ();
