@@ -9,10 +9,10 @@
 #include "TimeTable.h"
 
                                 // Definiciones para gestionar la semana
-#define t_keys 7                // Claves de las que se compone un dÌa
-#define t_days 5                // Total de dÌas h·biles de la semana
+#define t_keys 7                // Claves de las que se compone un d√≠a
+#define t_days 5                // Total de d√≠as h√°biles de la semana
 
-typedef struct {                // Estrucuta para aÒadir una clase
+typedef struct {                // Estrucuta para a√±adir una clase
     char *name;                 // Nombre de la clase
     char *location;             // Ubicacion de la clase
 } Class;                        // Nombre de la estructura
@@ -21,6 +21,6 @@ Class* createClass ();          // Procedimiento para crear una clase
 void** CreateKeys ();           // Procedimiento para crea las claves de las que se compone un dia
 void** NewTimeTable ();         // Procedimiento para crear la semana en su conjunto
 void PrintTimeTable (void**);   // Procedimiento para imprimir la semana por pantalla
-
+void Add (void**);              // Procedimiento para a√±adir una actividad a una clave
 
 #endif // TIMETABLE_H_INCLUDED
