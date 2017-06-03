@@ -1,7 +1,7 @@
 # Proyecto-Estrucuta @PUCV
 Este programa es un intendo de crear un sistema capaz de gestionar los horarios,
 actividades y tareas de un estudiante, con los de su institucion. Esto ayudará a los usuarios
-a planificar de mejor manera su semana y ayudará a crear un nexo de comunicación entre
+a planificar de mejor manera su semana y se podrá crear un nexo de comunicación entre
 los estudiantes y su casa de estudios.
 
 ## Características
