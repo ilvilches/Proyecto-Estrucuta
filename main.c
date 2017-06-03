@@ -36,6 +36,9 @@ int main()
         if(input == '3'){
             return EXIT_SUCCESS;
         }
+        if(input == '3'){
+            return EXIT_SUCCESS;
+        }
     }
     return EXIT_SUCCESS;
 }
