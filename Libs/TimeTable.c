@@ -58,3 +58,34 @@ void PrintTimeTable (void** tt){                        // Procedimiento para im
         }
     }
 }
+void Add (void** tt){                                           // Procedimiento para añadir una actividad a una clave
+    int d = -1,k = -1;                                          // Variables para montar el dia y la clave
+    char day [10],key[6];                                       // Variables para interactuar con el usuario
+    List* list = NULL;                                          // Variable para montar la lista de una clave
+    void** keys = NULL;                                         // Variable para montar las claves
+    while (d < 0 || d >= t_days) {                              // Ciclo para preguntar por el dia
+        printf ("Dia?   :  ");                                  // Preguntamos por el dia
+        scanf ("%s", day);                                      // Guardamos el dia
+        if (strstr (str_tolower (day), "lunes")) d = 0;         // Vemos que a que dia corresponde
+        if (strstr (str_tolower (day), "martes")) d = 1;        // Por defecto son 7
+        if (strstr (str_tolower (day), "miercoles")) d = 2;     // Pero solamente validará la respuesta
+        if (strstr (str_tolower (day), "jueves")) d = 3;        // cuando el día este dentro del rango de
+        if (strstr (str_tolower (day), "viernes")) d = 4;       // dias habiles (t_days)
+        if (strstr (str_tolower (day), "sabado")) d = 5;
+        if (strstr (str_tolower (day), "domingo")) d = 6;
+    }
+    while (k < 0 || k >= t_keys) {          // Ciclo para preguntar por la clave
+        printf ("Clave? :  ");              // Pregunta por la clave
+        scanf ("%s", key);                  // Guardamos la clave
+        if (strstr (key, "1-2")) k = 0;     // Realizamos el mismo procedimiento
+        if (strstr (key, "3-4")) k = 1;     // que hicimos para guardar los dias
+        if (strstr (key, "5-6")) k = 2;
+        if (strstr (key, "7-8")) k = 3;
+        if (strstr (key, "9-10")) k = 4;
+        if (strstr (key, "11-12")) k = 5;
+        if (strstr (key, "13-14")) k = 6;
+    }
+    keys = tt [d];                          // ahora que ya tenemos el dia, montamos dicho dia
+    list = keys [k];                        // ahora de ese dia, montamos la clave
+    pushBack (list,createClass());          // llamamos a createClass e insertamos la clase creada
+}

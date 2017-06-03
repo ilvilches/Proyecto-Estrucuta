@@ -13,6 +13,23 @@
 #endif
 void clearscr () {system (clear);}  // Segun corresponda ser� system ("cls") o systenm ("clear")
 
+// Procedimiento para pasar un string completo a minusculas
+char* str_tolower (char *string) {
+    char* ret = malloc (sizeof (char) * strlen (string));
+    int i = 0;
+    while (string [i] != '\0') {
+        if(string [i] >= 'A' && string [i] <= 'Z')
+            ret [i] = string [i] + (char) 32;
+        else
+            ret [i] = string [i];
+        i ++;
+    }
+    ret [i] = '\0';
+    return strdup (ret);
+}
+
+
+
 // Simula una pausa en la ejeccui�n del programa
 void pause ()
 {

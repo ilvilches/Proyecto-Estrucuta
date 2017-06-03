@@ -13,12 +13,9 @@
 #include "Libs/mauri.h"
 #include "Libs/TimeTable.h"
 
-
 int main()
 {
     void** tt = NewTimeTable ();
-    void** keys = NULL;
-    List* list = NULL;
     char input;
     while (1){
         clearscr ();
@@ -34,9 +31,7 @@ int main()
         if (input == '2'){
             clearscr ();
             printf ("SERVER > EDITAR HORARIO\n");
-            keys = tt [0];
-            list = keys [0];
-            pushBack (list,createClass());
+            Add (tt);
         }
         if(input == '3'){
             return EXIT_SUCCESS;
