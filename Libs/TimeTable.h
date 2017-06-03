@@ -15,12 +15,15 @@
 typedef struct {                // Estrucuta para añadir una clase
     char *name;                 // Nombre de la clase
     char *location;             // Ubicacion de la clase
+    char *time;                 // Hora de inicio de la actividad
+    int type;                   // Tipo de act (0 = clase, 1 = buses, 2 = caf, 3 = limpieza, 4 = suspension)
 } Class;                        // Nombre de la estructura
 
 Class* createClass ();          // Procedimiento para crear una clase
 void** CreateKeys ();           // Procedimiento para crea las claves de las que se compone un dia
 void** NewTimeTable ();         // Procedimiento para crear la semana en su conjunto
 void PrintTimeTable (void**);   // Procedimiento para imprimir la semana por pantalla
-void Add (void**);              // Procedimiento para añadir una actividad a una clave
+void AddClass (void**);         // Procedimiento para añadir una actividad a una clave
+void SeeKey (void**);           // Procedimiento para ver una clave en detalle
 
 #endif // TIMETABLE_H_INCLUDED

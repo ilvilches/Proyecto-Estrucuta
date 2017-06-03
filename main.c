@@ -22,16 +22,28 @@ int main()
         printf ("SERVER > MENU PRINCIPAL\n1.Ver horario\n2.Editar horario\n3.Salir\n\nInput: $ ");
         input = getchar ();
         if (input == '1'){
-            clearscr ();
-            printf ("SERVER > VISUALIZAR HORARIO\n");
-            PrintTimeTable (tt);
-            pause ();
+                getchar ();
+            while (input != '2'){
+                clearscr ();
+                printf ("SERVER > VISUALIZAR HORARIO\n");
+                PrintTimeTable (tt);
+                printf ("\n");
+                input = '0';
+                while (input != '1' && input != '2') {
+                    printf ("1. Ver clave en detalle 2. Volver\nInput : $ ");
+                    input = getchar ();
+                }
+                if (input == '1') {
+                    SeeKey (tt);
+                    pause ();
+                }
+            }
             input = '0';
         }
         if (input == '2'){
             clearscr ();
-            printf ("SERVER > EDITAR HORARIO\n");
-            Add (tt);
+            printf ("SERVER > EDITAR HORARIO\n\n");
+            AddClass (tt);
         }
         if(input == '3'){
             return EXIT_SUCCESS;

@@ -27,6 +27,20 @@ char* str_tolower (char *string) {
     ret [i] = '\0';
     return strdup (ret);
 }
+// Procedimiento para pasar un string completo a mayusculas
+char* str_toupper (char *string) {
+    char* ret = malloc (sizeof (char) * strlen (string));
+    int i = 0;
+    while (string [i] != '\0') {
+        if(string [i] >= 'a' && string [i] <= 'z')
+            ret [i] = string [i] - (char) 32;
+        else
+            ret [i] = string [i];
+        i ++;
+    }
+    ret [i] = '\0';
+    return strdup (ret);
+}
 
 
 

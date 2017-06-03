@@ -81,3 +81,44 @@
 	"Libs/mauri.h"
 	"Libs/TimeTable.h"
 
+1496506470 source:c:\users\mauri\documents\c scripts\proyecto-estrucuta\libs\list.c
+	<stdlib.h>
+	"List.h"
+
+1496506470 c:\users\mauri\documents\c scripts\proyecto-estrucuta\libs\list.h
+	<stdio.h>
+	<stdlib.h>
+
+1496512765 source:c:\users\mauri\documents\c scripts\proyecto-estrucuta\libs\mauri.c
+	<stdlib.h>
+	<string.h>
+	<stdio.h>
+	<limits.h>
+	"mauri.h"
+
+1496512870 c:\users\mauri\documents\c scripts\proyecto-estrucuta\libs\mauri.h
+
+1496512020 source:c:\users\mauri\documents\c scripts\proyecto-estrucuta\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"Libs/List.h"
+	"Libs/mauri.h"
+	"Libs/TimeTable.h"
+
+1496511967 c:\users\mauri\documents\c scripts\proyecto-estrucuta\libs\timetable.h
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"List.h"
+	"mauri.h"
+	"TimeTable.h"
+
+1496513413 source:c:\users\mauri\documents\c scripts\proyecto-estrucuta\libs\timetable.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"List.h"
+	"mauri.h"
+	"TimeTable.h"
+

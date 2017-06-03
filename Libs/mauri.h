@@ -8,5 +8,7 @@ int confirm (char *);
 void QError (char *);
 void NumbToDay (int);
 char* str_tolower (char*);
+char* str_toupper (char*);
+
 
 #endif // MAURI_H_INCLUDED
