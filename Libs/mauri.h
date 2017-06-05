@@ -9,6 +9,8 @@ void QError (char *);
 void NumbToDay (int);
 char* str_tolower (char*);
 char* str_toupper (char*);
+void clearstdin ();
+void mgets (char*, int);
 
 
 #endif // MAURI_H_INCLUDED

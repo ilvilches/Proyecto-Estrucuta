@@ -53,6 +53,7 @@ void pushFront (List* list, void* data)
     else list -> first -> prev = n;
     n -> next = list -> first;
     list -> first = n;
+    list -> current = n;
 }
 void pushBack(List* list, void* data)
 {
@@ -62,6 +63,7 @@ void pushBack(List* list, void* data)
     else list -> last -> next = n;
     n -> prev = list -> last;
     list -> last = n;
+    list -> current = n;
 }
 void pushCurrent (List* list, void* data)
 {

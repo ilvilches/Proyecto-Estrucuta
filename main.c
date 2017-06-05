@@ -19,31 +19,29 @@ int main()
     char input;
     while (1){
         clearscr ();
-        printf ("SERVER > MENU PRINCIPAL\n1.Ver horario\n2.Editar horario\n3.Salir\n\nInput: $ ");
+        printf ("SERVER > MENU PRINCIPAL\n\n1.Ver & Editar Horario Institucional\n3.Salir\n\nInput: $ ");
         input = getchar ();
         if (input == '1'){
-                getchar ();
-            while (input != '2'){
+            clearstdin ();
+            while (input != '4'){
                 clearscr ();
                 printf ("SERVER > VISUALIZAR HORARIO\n");
                 PrintTimeTable (tt);
                 printf ("\n");
                 input = '0';
-                while (input != '1' && input != '2') {
-                    printf ("1. Ver clave en detalle 2. Volver\nInput : $ ");
+                while (input != '1' && input != '4' && input != '3' && input != '2') {
+                    printf ("1. Ver clave en detalle 2. Agreagar 3. Eliminar 4. Volver\nInput : $ ");
                     input = getchar ();
+                    clearstdin ();
                 }
                 if (input == '1') {
                     SeeKey (tt);
                     pause ();
                 }
+                if (input == '2') AddClass (tt);
+                if (input == '3') {Remove (tt); clearstdin();}
             }
             input = '0';
-        }
-        if (input == '2'){
-            clearscr ();
-            printf ("SERVER > EDITAR HORARIO\n\n");
-            AddClass (tt);
         }
         if(input == '3'){
             return EXIT_SUCCESS;

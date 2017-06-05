@@ -11,8 +11,11 @@
 #else                               // En caso de que se ejecute bajo UNIX
 #define clear "clear"               // Se define como clear clear
 #endif
-void clearscr () {system (clear);}  // Segun corresponda ser� system ("cls") o systenm ("clear")
-
+void clearscr () {system (clear);}  // Segun corresponda será system ("cls") o systenm ("clear")
+void clearstdin (){
+    int buffer;
+    while (((buffer = fgetc(stdin)) != EOF && buffer != '\n'));
+}
 // Procedimiento para pasar un string completo a minusculas
 char* str_tolower (char *string) {
     char* ret = malloc (sizeof (char) * strlen (string));
@@ -43,11 +46,9 @@ char* str_toupper (char *string) {
 }
 
 
-
 // Simula una pausa en la ejeccui�n del programa
 void pause ()
 {
-    getchar ();
     printf ("\nPresione <ENTER> para continuar ");
     while (getchar() != '\n');
 }
@@ -61,7 +62,7 @@ char* readString ()
     int c;                                  // Variable para el caracter
     char* temp = NULL;                      // String temporal
     char* str = NULL;                       // String final
-    while ((c = fgetc (stdin)) != '\n')                             // Si falla agregar 'c != EOF'
+    while ((c = fgetc (stdin)) != '\n')     // Si falla agregar 'c != EOF'
     {
         if (size + 1 > capacity)                                    // Aumenta la capacidad del buffer
         {
@@ -125,4 +126,12 @@ void NumbToDay (int number)
     if (number == 5) printf (_5DAY);
     if (number == 6) printf (_6DAY);
     if (number == 7) printf (_7DAY);
+}
+void mgets (char* string, int size){
+    size += 2;
+    char buffer [size];
+    fgets (buffer, size, stdin);
+    int i = strlen (buffer);
+    buffer [i - 1] = '\0';
+    strcpy (string, buffer);
 }
